@@ -7,7 +7,6 @@ body{
 
 header {
     font-size: 0.5em;
-
     background-color: rgb(190, 186, 140);
     text-align: center;
     vertical-align: middle;
@@ -60,9 +59,20 @@ section{
 #equal{
     width: auto;
     background-color: rgb(109, 168, 200);
-
-
 }
+input[type=button], input[type=submit], input[type=reset] {
+    font-size: 0.9em;
+	font-family: "fredoka", sans-serif ;
+    background-color: rgb(177, 174, 174);
+    border: none;
+    height: 40px;
+    width: 70px;
+    color: white;
+    text-decoration: none;
+    margin: auto;
+    cursor: pointer;
+  }
+
 
 
 /*
@@ -123,4 +133,3 @@ section{
 	display: flex;
 	flex-wrap: wrap
 	/*justify-content: space-between;*/
-}}*/
