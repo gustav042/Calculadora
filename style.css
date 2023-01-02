@@ -1,0 +1,126 @@
+body{
+    width: infinite;
+    height: 900px;
+    font-size: 2em;
+	font-family: "fredoka", sans-serif ;
+}
+
+header {
+    font-size: 0.5em;
+
+    background-color: rgb(190, 186, 140);
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 10px;
+    padding: 15px;
+    width: 700px;
+    height: 80px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.139);
+}
+
+section{
+    background-color: gray;
+
+    height: 500px;
+    width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.139);
+
+}
+.visor{
+    margin: auto;
+    background-color: rgb(95, 108, 75);
+    height: 70px;
+    width: 320px;
+    border: 5px solid white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.139);
+
+}
+.grid-container{
+    margin-left:  1.25em;
+ 	height: 200px;
+    width: 200px;
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-row-gap: 10px;
+    grid-column-gap: 6px;}
+
+.grid-item{
+    background-color: rgb(177, 174, 174);
+    box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.139);
+    border-radius: 5px;
+    height: 50px;
+    width: 75px;
+    text-align: center;
+}
+
+#equal{
+    width: auto;
+    background-color: rgb(109, 168, 200);
+
+
+}
+
+
+/*
+#one{
+    background-color: rgb(177, 174, 174);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.139);
+
+ 	padding: 5px;
+ 	margin: 5px;
+ 	display: inline-block;
+ 	flex:3;
+     flex-basis: 100%;
+
+
+}
+
+#two{
+    background-color: rgb(177, 174, 174);
+
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.139);
+ 	padding: 5px;
+ 	margin: 5px;
+ 	display: inline-block;
+ 	flex: 1;
+    flex-basis: 100%;
+
+
+}
+#three{
+    background-color: rgb(177, 174, 174);
+
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.139);
+ 	padding: 5px;
+ 	margin: 5px;
+ 	display: inline-block;
+ 	flex: 1;
+    flex-basis: 100%;
+
+
+
+
+}
+#four{
+    background-color: rgb(177, 174, 174);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.139);
+ 	padding: 5px;
+ 	margin: 5px;
+ 	display: inline-block;
+ 	flex: 2;   
+    flex-basis: 100%;
+
+
+}
+
+@media(min-width: 680px){
+	.container-father{
+ 	margin: 10px auto;
+	display: flex;
+	flex-wrap: wrap
+	/*justify-content: space-between;*/
+}}*/
