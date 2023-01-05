@@ -99,27 +99,38 @@ function erase()
         {
             first = 0
             op = '';
+            num1 = visor.innerHTML.slice(0, -1);
+            last = visor.innerHTML.slice(-1);
             visor.innerHTML = visor.innerHTML.slice(0, -1);
         }
         else
         {
+            num2neg = 0;
             visor.innerHTML = visor.innerHTML.slice(0, -1);
-            last = visor.innerHTML.slice(-1, 0);
-            visor.innerHTML += '\nlast: ' + last;
         }
     }
     else {
         if (first == 0)
         {
             num1 = visor.innerHTML.slice(0, -1);
+            last = visor.innerHTML.slice(-1);
+            visor.innerHTML = visor.innerHTML.slice(0, -1);
         }
         else
         {
             var size = num1.length + 1;
             num2 = visor.innerHTML.slice(size, -1);
-
+            last = visor.innerHTML.slice(-1);
+            visor.innerHTML = visor.innerHTML.slice(0, -1);
+            if (last == '/' || last == 'x' || (last == '-' && num1 != '' )|| last == '+')
+            {
+                op = '';
+                first = 0;
+            }
         }
-        visor.innerHTML = visor.innerHTML.slice(0, -1);
     }
 }
+
+
+//bug de apagar num2 negativo
 
