@@ -5,6 +5,7 @@ var op = ''
 var first = 0
 var last = ''
 var equal = 0
+var num2neg = 0
 
 document.querySelectorAll('input').forEach(el => {
     el.addEventListener('click', () => {
@@ -47,6 +48,7 @@ function digit_pressed(digit) {
         num1 = '';
         num2 = '';
         equal = 1;
+        num2neg = 0;
         
     }
     else if (digit == 'C') {
@@ -55,10 +57,18 @@ function digit_pressed(digit) {
         num1 = ''
         num2 = ''
         equal = 0;
+        num2neg = 0;
         
     }
     else if ((digit == '/' || digit == 'x' || (digit == '-' && num1 != '' )|| digit == '+'))
     {
+        if((last == 'x' || last == '/') && digit == '-')
+        {
+            last = digit;
+            num2 += '-';
+            visor.innerHTML += digit;
+            num2neg = 1;
+        }
         if(first == 0 && num1 != '')
         {
             first = 1
@@ -85,10 +95,18 @@ function erase()
 {
     if (last == '/' || last == 'x' || (last == '-' && num1 != '' )|| last == '+')
     {
-        first = 0
-        op = '';
-        visor.innerHTML = visor.innerHTML.slice(0, -1);
-
+        if(num2neg == 0 && last != '-')
+        {
+            first = 0
+            op = '';
+            visor.innerHTML = visor.innerHTML.slice(0, -1);
+        }
+        else
+        {
+            visor.innerHTML = visor.innerHTML.slice(0, -1);
+            last = visor.innerHTML.slice(-1, 0);
+            visor.innerHTML += '\nlast: ' + last;
+        }
     }
     else {
         if (first == 0)
@@ -97,9 +115,11 @@ function erase()
         }
         else
         {
-            var size = num1.length;
+            var size = num1.length + 1;
             num2 = visor.innerHTML.slice(size, -1);
+
         }
         visor.innerHTML = visor.innerHTML.slice(0, -1);
     }
 }
+
