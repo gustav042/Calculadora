@@ -24,11 +24,10 @@ function digit_pressed(digit) {
     else if (digit == '=' && equal == 0)  
     {
         visor.innerHTML = "";
-        if(num1 != '' && num2 != '')
-        {
         switch(op) 
             {
             case '+':
+                visor.innerHTML += 'number2: ' + num2;
                 visor.innerHTML = Number(num1) + Number(num2);
                 break;
             case '-':
@@ -37,14 +36,16 @@ function digit_pressed(digit) {
             case '/':
                 visor.innerHTML = Number(num1) / Number(num2);
                 break;
-            default:
+            case '*':
                 visor.innerHTML = Number(num1) * Number(num2);
+            default:
+                visor.innerHTML = num1;
             }
-            first = 0;
-            num1 = '';
-            num2 = '';
-            equal = 1;
-        }
+        first = 0;
+        num1 = '';
+        num2 = '';
+        equal = 1;
+        
     }
     else if (digit == 'C') {
         visor.innerHTML = "";
