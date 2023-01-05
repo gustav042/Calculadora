@@ -106,6 +106,8 @@ function erase()
         else
         {
             num2neg = 0;
+            first = 1;
+            last = visor.innerHTML.slice(-1);
             visor.innerHTML = visor.innerHTML.slice(0, -1);
         }
     }
@@ -122,7 +124,7 @@ function erase()
             num2 = visor.innerHTML.slice(size, -1);
             last = visor.innerHTML.slice(-1);
             visor.innerHTML = visor.innerHTML.slice(0, -1);
-            if (last == '/' || last == 'x' || (last == '-' && num1 != '' )|| last == '+')
+            if (last == '/' || last == 'x' || (last == '-' && num1 == '' )|| last == '+')
             {
                 op = '';
                 first = 0;
