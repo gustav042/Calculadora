@@ -27,17 +27,19 @@ function digit_pressed(digit) {
         switch(op) 
             {
             case '+':
-                visor.innerHTML += 'number2: ' + num2;
                 visor.innerHTML = Number(num1) + Number(num2);
                 break;
             case '-':
                 visor.innerHTML = Number(num1) - Number(num2);
+
                 break;
             case '/':
                 visor.innerHTML = Number(num1) / Number(num2);
+
                 break;
-            case '*':
+            case 'x':
                 visor.innerHTML = Number(num1) * Number(num2);
+                break;
             default:
                 visor.innerHTML = num1;
             }
